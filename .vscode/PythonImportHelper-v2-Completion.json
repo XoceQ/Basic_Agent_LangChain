@@ -1,0 +1,81 @@
+[
+    {
+        "label": "PromptTemplate",
+        "importPath": "langchain.prompts",
+        "description": "langchain.prompts",
+        "isExtraImport": true,
+        "detail": "langchain.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ChatOpenAI",
+        "importPath": "langchain_openai",
+        "description": "langchain_openai",
+        "isExtraImport": true,
+        "detail": "langchain_openai",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"OPENAI_API_KEY\"]",
+        "kind": 5,
+        "importPath": "agent",
+        "description": "agent",
+        "peekOfCode": "os.environ[\"OPENAI_API_KEY\"] = \"\"\n# Crear prompt\nprompt = PromptTemplate(\n    input_variables=[\"pregunta\"],\n    template=\"Responde de forma concisa: {pregunta}\"\n)\n# Instanciar modelo\nllm = ChatOpenAI(model=\"gpt-4o\", temperature=0.3)\n# Crear cadena moderna usando operadores funcionales\nchain = prompt | llm",
+        "detail": "agent",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 5,
+        "importPath": "agent",
+        "description": "agent",
+        "peekOfCode": "prompt = PromptTemplate(\n    input_variables=[\"pregunta\"],\n    template=\"Responde de forma concisa: {pregunta}\"\n)\n# Instanciar modelo\nllm = ChatOpenAI(model=\"gpt-4o\", temperature=0.3)\n# Crear cadena moderna usando operadores funcionales\nchain = prompt | llm\n# Ejecutar\npregunta_usuario = \"¿Cuál es la capital de Colombia?\"",
+        "detail": "agent",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "agent",
+        "description": "agent",
+        "peekOfCode": "llm = ChatOpenAI(model=\"gpt-4o\", temperature=0.3)\n# Crear cadena moderna usando operadores funcionales\nchain = prompt | llm\n# Ejecutar\npregunta_usuario = \"¿Cuál es la capital de Colombia?\"\nrespuesta = chain.invoke({\"pregunta\": pregunta_usuario})\nprint(\"🤖 Respuesta del agente:\", respuesta.content)",
+        "detail": "agent",
+        "documentation": {}
+    },
+    {
+        "label": "chain",
+        "kind": 5,
+        "importPath": "agent",
+        "description": "agent",
+        "peekOfCode": "chain = prompt | llm\n# Ejecutar\npregunta_usuario = \"¿Cuál es la capital de Colombia?\"\nrespuesta = chain.invoke({\"pregunta\": pregunta_usuario})\nprint(\"🤖 Respuesta del agente:\", respuesta.content)",
+        "detail": "agent",
+        "documentation": {}
+    },
+    {
+        "label": "pregunta_usuario",
+        "kind": 5,
+        "importPath": "agent",
+        "description": "agent",
+        "peekOfCode": "pregunta_usuario = \"¿Cuál es la capital de Colombia?\"\nrespuesta = chain.invoke({\"pregunta\": pregunta_usuario})\nprint(\"🤖 Respuesta del agente:\", respuesta.content)",
+        "detail": "agent",
+        "documentation": {}
+    },
+    {
+        "label": "respuesta",
+        "kind": 5,
+        "importPath": "agent",
+        "description": "agent",
+        "peekOfCode": "respuesta = chain.invoke({\"pregunta\": pregunta_usuario})\nprint(\"🤖 Respuesta del agente:\", respuesta.content)",
+        "detail": "agent",
+        "documentation": {}
+    }
+]
